@@ -7,13 +7,13 @@ const Home = () => {
 	return (
 		<Wrapper>
 			<div>
-				<div>
+				<div style={{paddingTop: "100px", paddingBottom: "100px"}}>
 					<Greeting/>
 				</div>
-				<div>
+				<div style={{paddingTop: "100px", paddingBottom: "100px"}}>
 					<Projects />
 				</div>
-				<div>
+				<div style={{paddingTop: "100px", paddingBottom: "100px"}}>
 					<Education />
 				</div>
 			</div>
