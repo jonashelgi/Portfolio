@@ -1,20 +1,21 @@
 import React from "react";
-// import Particles from "react-particles-js";
+import Particles from "react-particles-js";
 
 const Background = () => {
 	return (
 		<div
-			// style={{
-			// 	position: "fixed",
-			// 	top: 0,
-			// 	left: 0,
-			// 	width: "100%",
-			// 	height: "100%",
-			// 	backgroundSize: "cover",
-			// 	backgroundColor: "#F8F8F8"
-			// }}
+			style={{
+				position: "absolute",
+				top: 0,
+				left: 0,
+				width: "100%",
+				height: "100%",
+				backgroundSize: "cover",
+				backgroundColor: "#F8F8F8",
+				zIndex: 0,
+			}}
 		>
-			{/* <Particles
+			<Particles
 				params={{
 					particles: {
 						color: {
@@ -44,32 +45,32 @@ const Background = () => {
 							out_mode: "out",
 						},
 					},
-					interactivity: {
-						events: {
-							onhover: {
-								enable: true,
-								mode: "bubble",
-							},
-							onclick: {
-								enable: true,
-								mode: "repulse",
-							},
-						},
-						modes: {
-							bubble: {
-								distance: 250,
-								duration: 2,
-								size: 0,
-								opacity: 0,
-							},
-							repulse: {
-								distance: 400,
-								duration: 2,
-							},
-						},
-					},
+					// interactivity: {
+					// 	events: {
+					// 		onhover: {
+					// 			enable: true,
+					// 			mode: "bubble",
+					// 		},
+					// 		onclick: {
+					// 			enable: true,
+					// 			mode: "repulse",
+					// 		},
+					// 	},
+					// 	modes: {
+					// 		bubble: {
+					// 			distance: 250,
+					// 			duration: 2,
+					// 			size: 0,
+					// 			opacity: 0,
+					// 		},
+					// 		repulse: {
+					// 			distance: 400,
+					// 			duration: 2,
+					// 		},
+					// 	},
+					// },
 				}}
-			/> */}
+			/>
 		</div>
 	);
 };
