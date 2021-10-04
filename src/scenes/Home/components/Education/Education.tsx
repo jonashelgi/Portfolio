@@ -9,29 +9,37 @@ import {
 	TimelineDot,
 } from "@mui/lab";
 
+import { color } from "../../../../utils";
+import "./Education.css";
+
 const Education = () => {
 	return (
 		<Container maxWidth="md">
 			<Timeline>
 				<TimelineItem>
 					<TimelineSeparator>
-						<TimelineDot />
-						<TimelineConnector />
+						<TimelineDot sx={{ backgroundColor: color.black }} />
+						<TimelineConnector sx={{ backgroundColor: color.black }} />
 					</TimelineSeparator>
-					<TimelineContent>Eat</TimelineContent>
+					<TimelineContent sx={{ color: color.black }}>
+						<Typography variant="h6" component="span">
+							Menntamálastofnun
+						</Typography>
+						<Typography>Vefhönnuður</Typography>
+					</TimelineContent>
 				</TimelineItem>
 				<TimelineItem>
 					<TimelineSeparator>
-						<TimelineDot />
-						<TimelineConnector />
+						<TimelineDot sx={{ backgroundColor: color.black }} />
+						<TimelineConnector sx={{ backgroundColor: color.black }} />
 					</TimelineSeparator>
-					<TimelineContent>Code</TimelineContent>
+					<TimelineContent sx={{ color: color.black }}>Code</TimelineContent>
 				</TimelineItem>
 				<TimelineItem>
 					<TimelineSeparator>
-						<TimelineDot />
+						<TimelineDot sx={{ backgroundColor: color.black }} />
 					</TimelineSeparator>
-					<TimelineContent>Sleep</TimelineContent>
+					<TimelineContent sx={{ color: color.black }}>Sleep</TimelineContent>
 				</TimelineItem>
 			</Timeline>
 		</Container>

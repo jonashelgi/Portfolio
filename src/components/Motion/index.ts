@@ -1,1 +1,3 @@
-export { default as Motion } from "./Motion";
+export { MotionLeft } from "./MotionLeft";
+export { MotionRight } from "./MotionRight";
+export { MotionRoot } from "./MotionRoot";

@@ -13,17 +13,16 @@ interface PropTypes {
 	children: React.ReactNode;
 }
 
-const Motion = ({ children }: PropTypes) => {
+const MotionLeft = ({ children }: PropTypes) => {
 	return (
 		<motion.div
-			key="modal"
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
+			initial={{ y: 50, opacity: 0 }}
+			animate={{ y: 0, opacity: 1 }}
+			transition={{ type: "spring", stiffness: 60 }}
 		>
 			{children}
 		</motion.div>
 	);
 };
 
-export default Motion;
+export default MotionLeft;

@@ -5,24 +5,21 @@
 import React from "react";
 import { Container } from "@mui/material";
 
-import { Motion } from "../../components";
+import { MotionRoot, Header } from "../../components";
 
 interface WrapperProps {
 	children: React.ReactNode;
 }
 
-// const root = {
-// 	backgroundColor: "#ededed",
-// }
-
 const Wrapper = ({ children }: WrapperProps) => {
 	return (
 		<div>
-			<Motion>
+			<MotionRoot>
 				<Container>
+					<Header />
 					<div>{children}</div>
 				</Container>
-			</Motion>
+			</MotionRoot>
 		</div>
 	);
 };
