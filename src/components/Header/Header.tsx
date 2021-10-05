@@ -34,18 +34,13 @@ const Header = () => {
 					aria-label="outlined button group"
 				>
 					<Button sx={btn}>
-						<Link href="#" underline="none" sx={link}>
-							Verkefni
+						<Link href="#Projects" underline="none" sx={link}>
+							Projects
 						</Link>
 					</Button>
 					<Button sx={btn}>
-						<Link href="#" underline="none" sx={link}>
-							Verkefni
-						</Link>
-					</Button>
-					<Button sx={btn}>
-						<Link href="#" underline="none" sx={link}>
-							Verkefni
+						<Link href="#Courses" underline="none" sx={link}>
+							Courses
 						</Link>
 					</Button>
 				</ButtonGroup>

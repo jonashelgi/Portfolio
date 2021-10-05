@@ -13,7 +13,7 @@ interface PropTypes {
 	children: React.ReactNode;
 }
 
-const MotionLeft = ({ children }: PropTypes) => {
+const MotionUp = ({ children }: PropTypes) => {
 	return (
 		<motion.div
 			initial={{ y: 50, opacity: 0 }}
@@ -25,4 +25,4 @@ const MotionLeft = ({ children }: PropTypes) => {
 	);
 };
 
-export default MotionLeft;
+export default MotionUp;

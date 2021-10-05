@@ -11,7 +11,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import InfoIcon from "@mui/icons-material/Info";
 
 import { color } from "../../../../utils";
-import { MotionRight, MotionLeft } from "../../../../components";
+import { MotionUp } from "../../../../components";
 
 const icon = {
 	fontSize: "40px",
@@ -21,12 +21,17 @@ const icon = {
 const Projects = () => {
 	return (
 		<div>
-			<MotionLeft>
-				<Typography variant="h3" color={color.white}>
+			<MotionUp>
+				<Typography
+					variant="h3"
+					color={color.white}
+					style={{ paddingBottom: "25px" }}
+					className="textShadow"
+				>
 					Verkefni
 				</Typography>
-			</MotionLeft>
-			<MotionLeft>
+			</MotionUp>
+			<MotionUp>
 				<Grid container spacing={2}>
 					<Grid item xs={12} sm={6} md={6} lg={4}>
 						<Card
@@ -38,7 +43,7 @@ const Projects = () => {
 							<CardMedia
 								component="img"
 								alt="green iguana"
-								image="https://images.prismic.io/adalnamskra/366bb611-d6da-4ec4-95dc-e20f3503b4f0_merki-logo-min.png?auto=compress,format"
+								image="https://images.ctfassets.net/8k0h54kbe6bj/4b7HN4aN9kNhnqo9Ah8l7j/af8770efd74c91e955c4511b93a9f422/Barnavagn.svg?w=300&q=80"
 								sx={{
 									borderRadius: "25px",
 									padding: "10px",
@@ -181,7 +186,7 @@ const Projects = () => {
 						</Card>
 					</Grid>
 				</Grid>
-			</MotionLeft>
+			</MotionUp>
 		</div>
 	);
 };

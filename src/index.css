@@ -7,9 +7,8 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: linear-gradient(-90deg, #a06060, #8b7575, #956b6b);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	background: linear-gradient(150deg, #355070 25%, #3d5c81 25%);
+	background-size: 300% 300%;
 	height: 100vh;
 }
 
@@ -18,20 +17,8 @@ code {
 		monospace;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	25% {
-		background-position: 50% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	75% {
-		background-position: 50% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.textShadow {
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+		0px 18px 23px rgba(0, 0, 0, 0.1);
 }
+

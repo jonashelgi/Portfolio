@@ -4,7 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import { color } from "../../../../utils";
-import { MotionLeft } from "../../../../components";
+import { MotionUp } from "../../../../components";
 
 const icon = {
 	fontSize: "40px",
@@ -19,9 +19,9 @@ const center = {
 
 const Greeting = () => {
 	return (
-		<MotionLeft>
+		<MotionUp>
 			<div style={center}>
-				<Typography variant="h1" color={color.white}>
+				<Typography variant="h1" color={color.white} className="textShadow">
 					Jonas Helgi
 				</Typography>
 			</div>
@@ -39,7 +39,7 @@ const Greeting = () => {
 						window.open("https://github.com/jonashelgi");
 					}}
 				>
-					<GitHubIcon sx={icon} />
+					<GitHubIcon sx={icon}/>
 				</IconButton>
 
 				<IconButton
@@ -51,7 +51,7 @@ const Greeting = () => {
 					<LinkedInIcon sx={icon} />
 				</IconButton>
 			</div>
-		</MotionLeft>
+		</MotionUp>
 	);
 };
 
