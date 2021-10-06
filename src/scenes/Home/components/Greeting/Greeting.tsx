@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, IconButton } from "@mui/material";
+import { Typography, IconButton, useMediaQuery } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -8,9 +8,8 @@ import { MotionUp } from "../../../../components";
 
 const icon = {
 	fontSize: "40px",
-	color: color.white,
+	color: color.black,
 };
-
 const center = {
 	display: "flex",
 	justifyContent: "center",
@@ -18,11 +17,12 @@ const center = {
 };
 
 const Greeting = () => {
+	const small = useMediaQuery('(min-width:600px)');
 	return (
 		<MotionUp>
 			<div style={center}>
-				<Typography variant="h1" color={color.white} className="textShadow">
-					Jonas Helgi
+				<Typography variant="h1" color={color.black} className="textShadow">
+					Jónas Helgi
 				</Typography>
 			</div>
 			<div

@@ -1,13 +1,7 @@
 import React from "react";
-import {
-	Card,
-	CardContent,
-	Typography,
-	Grid,
-	IconButton,
-} from "@mui/material";
+import { Card, CardContent, Typography, Grid, IconButton } from "@mui/material";
 import LinkIcon from "@mui/icons-material/Link";
-import VerifiedIcon from '@mui/icons-material/Verified';
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 import { color } from "../../../../utils";
 import { MotionUp } from "../../../../components";
@@ -16,26 +10,32 @@ const icon = {
 	fontSize: "40px",
 	color: color.black,
 };
+const card = {
+	borderRadius: "25px",
+	boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+};
 
 const Courses = () => {
 	return (
 		<div>
 			<MotionUp>
-				<Typography variant="h3" color={color.white} style={{paddingBottom: "25px"}} className="textShadow">
+				<Typography
+					variant="h3"
+					color={color.black}
+					style={{ paddingBottom: "25px" }}
+					className="textShadow"
+				>
 					Námskeið
 				</Typography>
 			</MotionUp>
 			<MotionUp>
 				<Grid container spacing={2}>
 					<Grid item xs={12} sm={6} md={6} lg={4}>
-						<Card
-							sx={{
-								borderRadius: "25px",
-								boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-							}}
-						>
+						<Card sx={card}>
 							<CardContent>
-								<Typography variant="h5">Tableau 2020 A-Z: Hands-On Tableau Training for Data Science</Typography>
+								<Typography variant="h5">
+									Tableau 2020 A-Z: Hands-On Tableau Training for Data Science
+								</Typography>
 								<IconButton
 									aria-label="Github"
 									onClick={() => {
@@ -47,7 +47,9 @@ const Courses = () => {
 								<IconButton
 									aria-label="Github"
 									onClick={() => {
-										window.open("https://www.udemy.com/certificate/UC-3c163630-9a06-4ea5-8221-14e07bf856bc/");
+										window.open(
+											"https://www.udemy.com/certificate/UC-3c163630-9a06-4ea5-8221-14e07bf856bc/"
+										);
 									}}
 								>
 									<VerifiedIcon sx={icon} />
@@ -56,20 +58,18 @@ const Courses = () => {
 						</Card>
 					</Grid>
 
-
 					<Grid item xs={12} sm={6} md={6} lg={4}>
-						<Card
-							sx={{
-								borderRadius: "25px",
-								boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-							}}
-						>
+						<Card sx={card}>
 							<CardContent>
-								<Typography variant="h5">The Complete 2021 Web Development Bootcamp</Typography>
+								<Typography variant="h5">
+									The Complete 2021 Web Development Bootcamp
+								</Typography>
 								<IconButton
 									aria-label="Github"
 									onClick={() => {
-										window.open("https://www.udemy.com/course/the-complete-web-development-bootcamp/");
+										window.open(
+											"https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+										);
 									}}
 								>
 									<LinkIcon sx={icon} />
@@ -77,7 +77,9 @@ const Courses = () => {
 								<IconButton
 									aria-label="Github"
 									onClick={() => {
-										window.open("https://www.udemy.com/certificate/UC-10471ff1-f7dd-4142-af02-a1e33a151341/");
+										window.open(
+											"https://www.udemy.com/certificate/UC-10471ff1-f7dd-4142-af02-a1e33a151341/"
+										);
 									}}
 								>
 									<VerifiedIcon sx={icon} />

@@ -4,11 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import Routes from "./Routes";
-// import { Background } from "./components";
+import { Background } from "./components";
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			{/* <Background /> */}
+			<Background />
 			<Routes />
 		</BrowserRouter>
 	</React.StrictMode>,

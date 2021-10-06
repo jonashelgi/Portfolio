@@ -1,4 +1,4 @@
 /* Unable to change the hover color without important */
 .MuiButtonGroup-grouped:hover {
-	border-color: #cccccc !important;
+	border-color: #979797 !important;
 }

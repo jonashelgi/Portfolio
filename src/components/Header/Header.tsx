@@ -17,11 +17,11 @@ const root = {
 	paddingTop: "20px",
 };
 const btn = {
-	borderColor: color.white,
+	borderColor: color.black,
 	fontSize: "20px",
 };
 const link = {
-	color: color.white,
+	color: color.black,
 };
 
 const Header = () => {

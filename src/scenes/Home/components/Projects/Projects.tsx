@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Card,
 	CardContent,
@@ -12,19 +12,25 @@ import InfoIcon from "@mui/icons-material/Info";
 
 import { color } from "../../../../utils";
 import { MotionUp } from "../../../../components";
+import adalnamskralogo from "../../../../utils/Images/adalnamskra.jpg";
 
 const icon = {
 	fontSize: "40px",
 	color: color.black,
 };
+const card = {
+	borderRadius: "25px",
+	boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+};
 
 const Projects = () => {
+	const [isClick, setClick] = useState(false);
 	return (
 		<div>
 			<MotionUp>
 				<Typography
 					variant="h3"
-					color={color.white}
+					color={color.black}
 					style={{ paddingBottom: "25px" }}
 					className="textShadow"
 				>
@@ -34,28 +40,34 @@ const Projects = () => {
 			<MotionUp>
 				<Grid container spacing={2}>
 					<Grid item xs={12} sm={6} md={6} lg={4}>
-						<Card
-							sx={{
-								borderRadius: "25px",
-								boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-							}}
-						>
-							<CardMedia
-								component="img"
-								alt="green iguana"
-								image="https://images.ctfassets.net/8k0h54kbe6bj/4b7HN4aN9kNhnqo9Ah8l7j/af8770efd74c91e955c4511b93a9f422/Barnavagn.svg?w=300&q=80"
-								sx={{
-									borderRadius: "25px",
-									padding: "10px",
-									maxWidth: "300px",
+						<Card sx={card}>
+							<div
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									paddingTop: "15px",
 								}}
-							/>
+							>
+								<CardMedia
+									component="img"
+									alt="green iguana"
+									image={adalnamskralogo}
+									sx={{
+										borderRadius: "25px",
+										maxWidth: "300px",
+										cursor: "pointer"
+									}}
+									onClick={() => {
+										window.open("https://adalnamskra.is/");
+									}}
+								/>
+							</div>
 							<CardContent>
 								<Typography variant="h5">Aðalnámskrá grunnskóla</Typography>
 								<IconButton
 									aria-label="Github"
 									onClick={() => {
-										window.open("https://github.com/jonashelgi");
+										window.open("https://adalnamskra.is/");
 									}}
 								>
 									<LinkIcon sx={icon} />
@@ -63,127 +75,24 @@ const Projects = () => {
 								<IconButton
 									aria-label="Github"
 									onClick={() => {
-										window.open("https://github.com/jonashelgi");
+										setClick(!isClick);
 									}}
 								>
 									<InfoIcon sx={icon} />
 								</IconButton>
 							</CardContent>
 						</Card>
-					</Grid>
-					<Grid item xs={12} sm={6} md={6} lg={4}>
-						<Card
-							sx={{
-								borderRadius: "25px",
-								boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-							}}
-						>
-							<CardMedia
-								component="img"
-								alt="green iguana"
-								image="https://images.prismic.io/adalnamskra/366bb611-d6da-4ec4-95dc-e20f3503b4f0_merki-logo-min.png?auto=compress,format"
-								sx={{
-									borderRadius: "25px",
-									padding: "10px",
-									maxWidth: "300px",
-								}}
-							/>
-							<CardContent>
-								<Typography variant="h5">Aðalnámskrá grunnskóla</Typography>
-								<IconButton
-									aria-label="Github"
-									onClick={() => {
-										window.open("https://github.com/jonashelgi");
-									}}
-								>
-									<LinkIcon sx={icon} />
-								</IconButton>
-								<IconButton
-									aria-label="Github"
-									onClick={() => {
-										window.open("https://github.com/jonashelgi");
-									}}
-								>
-									<InfoIcon sx={icon} />
-								</IconButton>
-							</CardContent>
-						</Card>
-					</Grid>
-					<Grid item xs={12} sm={6} md={6} lg={4}>
-						<Card
-							sx={{
-								borderRadius: "25px",
-								boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-							}}
-						>
-							<CardMedia
-								component="img"
-								alt="green iguana"
-								image="https://images.prismic.io/adalnamskra/366bb611-d6da-4ec4-95dc-e20f3503b4f0_merki-logo-min.png?auto=compress,format"
-								sx={{
-									borderRadius: "25px",
-									padding: "10px",
-									maxWidth: "300px",
-								}}
-							/>
-							<CardContent>
-								<Typography variant="h5">Aðalnámskrá grunnskóla</Typography>
-								<IconButton
-									aria-label="Github"
-									onClick={() => {
-										window.open("https://github.com/jonashelgi");
-									}}
-								>
-									<LinkIcon sx={icon} />
-								</IconButton>
-								<IconButton
-									aria-label="Github"
-									onClick={() => {
-										window.open("https://github.com/jonashelgi");
-									}}
-								>
-									<InfoIcon sx={icon} />
-								</IconButton>
-							</CardContent>
-						</Card>
-					</Grid>
-					<Grid item xs={12} sm={6} md={6} lg={4}>
-						<Card
-							sx={{
-								borderRadius: "25px",
-								boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-							}}
-						>
-							<CardMedia
-								component="img"
-								alt="green iguana"
-								image="https://images.prismic.io/adalnamskra/366bb611-d6da-4ec4-95dc-e20f3503b4f0_merki-logo-min.png?auto=compress,format"
-								sx={{
-									borderRadius: "25px",
-									padding: "10px",
-									maxWidth: "300px",
-								}}
-							/>
-							<CardContent>
-								<Typography variant="h5">Aðalnámskrá grunnskóla</Typography>
-								<IconButton
-									aria-label="Github"
-									onClick={() => {
-										window.open("https://github.com/jonashelgi");
-									}}
-								>
-									<LinkIcon sx={icon} />
-								</IconButton>
-								<IconButton
-									aria-label="Github"
-									onClick={() => {
-										window.open("https://github.com/jonashelgi");
-									}}
-								>
-									<InfoIcon sx={icon} />
-								</IconButton>
-							</CardContent>
-						</Card>
+						<div style={{ paddingTop: "15px" }}>
+							{isClick && (
+								<MotionUp>
+									<Card sx={card}>
+										<CardContent>
+											<Typography>Góðan dag</Typography>
+										</CardContent>
+									</Card>
+								</MotionUp>
+							)}
+						</div>
 					</Grid>
 				</Grid>
 			</MotionUp>

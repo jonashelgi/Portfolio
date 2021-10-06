@@ -5,14 +5,14 @@ const Background = () => {
 	return (
 		<div
 			style={{
-				position: "absolute",
+				position: "fixed",
 				top: 0,
 				left: 0,
 				width: "100%",
 				height: "100%",
 				backgroundSize: "cover",
 				backgroundColor: "#F8F8F8",
-				zIndex: 0,
+				zIndex: -1,
 			}}
 		>
 			<Particles
