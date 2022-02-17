@@ -1,0 +1,15 @@
+@import "../../utils/constants/colors.css";
+
+.root {
+  background-color: var(--second);
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.main {
+  background-color: var(--main);
+}
+
+.second {
+  background-color: var(--second);
+}

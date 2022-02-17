@@ -1,0 +1,18 @@
+@import "../../../../utils/constants/colors.css";
+
+.root {
+	padding-bottom: 50px;
+}
+
+.title {
+	padding-bottom: 5px;
+	color: var(--second);
+}
+
+.icon {
+	margin-bottom: 15px;
+}
+
+.col {
+	padding-bottom: 15px;
+}

@@ -1,0 +1,5 @@
+@import "../../utils/constants/colors.css";
+
+.header {
+  background-color: var(--second);
+}
