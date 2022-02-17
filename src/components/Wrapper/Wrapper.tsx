@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
 
 import { Header } from "../";
@@ -9,10 +10,10 @@ export interface WrapperProps {
 
 export const Wrapper = ({ children }: WrapperProps) => {
   return (
-    <div className={styles.header}>
+    <Box className={styles.header}>
       <Header />
-      <div>{children}</div>
-    </div>
+      <>{children}</>
+    </Box>
   );
 };
 

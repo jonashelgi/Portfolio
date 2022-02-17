@@ -7,7 +7,7 @@ import styles from "./Courses.module.css";
 
 const Courses = () => {
   return (
-    <Container>
+    <Container maxW="8xl">
       <div>
         <h3 className={styles.title}>
           <BsBook size={40} className={styles.icon} /> NÁMSKEIÐ

@@ -7,7 +7,7 @@ import styles from "./Projects.module.css";
 
 const Projects = () => {
   return (
-    <Container className={styles.root}>
+    <Container className={styles.root} maxW="8xl">
       <h3 className={styles.title}>
         <BsKanban size={40} className={styles.icon} /> VERKEFNI
       </h3>
