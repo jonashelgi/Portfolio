@@ -1,9 +1,0 @@
-@import "../../../../utils/constants/colors.css";
-
-.title {
-  color: var(--main);
-}
-
-.icon {
-  margin-bottom: 15px;
-}

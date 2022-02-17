@@ -20,33 +20,5 @@ code {
     0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
-.HoverContainer .HoverItem:hover {
-  text-decoration: none;
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.HoverContainer .HoverItem {
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-.BoxShadow {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.progress-bar {
-  background-color: #234d5e;
-}
-
-.css-zgt7u1 {
-  padding: 0px 0px 0px 0px;
-  background: #efefef;
-}
-
-.bg-primary {
-  background-color: #234d5e!important;
-}
+.boxShadow {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}

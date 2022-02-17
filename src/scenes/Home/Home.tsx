@@ -1,32 +1,30 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
 
-import { Wrapper, Waves } from "../../components";
+import { Waves, Header } from "../../components";
+import { color } from "../../utils";
 import { Greeting, Projects, Courses, Work } from "./components";
-import styles from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div style={{ backgroundColor: "#efefef" }}>
-      <Wrapper>
-        <div>
-          <div className={styles.root}>
-            <Greeting />
-          </div>
-          <Waves Type="top" />
-          <div id="Projects" className={styles.main}>
-            <Projects />
-          </div>
-          <Waves Type="bottom" />
-          <div id="Courses" className={styles.second}>
-            <Courses />
-          </div>
-          <Waves Type="top" />
-          <div id="Work" className={styles.main}>
-            <Work />
-          </div>
-        </div>
-      </Wrapper>
-    </div>
+    <Box bg={color.second}>
+      <Header />
+      <Box bg={color.second}>
+        <Greeting />
+      </Box>
+      <Waves Type="top" />
+      <Box bg={color.main} id="Projects">
+        <Projects />
+      </Box>
+      <Waves Type="bottom" />
+      <Box bg={color.second} id="Courses">
+        <Courses />
+      </Box>
+      <Waves Type="top" />
+      <Box bg={color.main} id="Work">
+        <Work />
+      </Box>
+    </Box>
   );
 };
 

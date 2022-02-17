@@ -1,21 +1,22 @@
 import React from "react";
-import { Container, SimpleGrid } from "@chakra-ui/react";
+import { Container, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { BsKanban } from "react-icons/bs";
 
 import { ProjectCard } from "../../../../components";
-import styles from "./Projects.module.css";
+import { color } from "../../../../utils";
 
 const Projects = () => {
   return (
-    <Container className={styles.root} maxW="8xl">
-      <h3 className={styles.title}>
-        <BsKanban size={40} className={styles.icon} /> VERKEFNI
-      </h3>
-      <SimpleGrid>
+    <Container maxW="8xl" paddingBottom={"28"}>
+      <Stack direction={"row"}paddingTop={5} paddingBottom={5}>
+        <BsKanban size={40} color={color.white100}/>
+        <Text fontSize={"2xl"} color={color.white100}>VERKEFNI</Text>
+      </Stack>
+      <SimpleGrid minChildWidth={"300px"} gap={5}>
         <ProjectCard
           Title="Aðalnámskrá grunnskóla"
           SubTitle="Menntamálastofnun"
-          Text="Hanna og forrita aðalnámskrá grunnskóla yfir á rafrænt form ásamt áframhaldandi þróun og viðhald."
+          Info="Hanna og forrita aðalnámskrá grunnskóla yfir á rafrænt form ásamt áframhaldandi þróun og viðhald."
           LinkUrl="https://adalnamskra.is/"
           Tags={[
             { content: "React" },
@@ -28,7 +29,7 @@ const Projects = () => {
         <ProjectCard
           Title="Portfolio"
           SubTitle="Jónas Helgi"
-          Text="Síða sem inniheldur yfirlit af öllum mínum verkefnum, þetta er síðan sem þú ert á núna. "
+          Info="Síða sem inniheldur yfirlit af öllum mínum verkefnum, þetta er síðan sem þú ert á núna. "
           GithubUrl="https://github.com/jonashelgi/portfolio"
           Tags={[
             { content: "React" },
@@ -40,7 +41,7 @@ const Projects = () => {
         <ProjectCard
           Title="Epic Store Clone"
           SubTitle="Jónas Helgi"
-          Text="Endurherma af fræga windows tölvuleikja appinu hjá Epic Store."
+          Info="Endurherma af fræga windows tölvuleikja appinu hjá Epic Store."
           LinkUrl="https://gamestore-clone.web.app/"
           GithubUrl="https://github.com/jonashelgi/epicstore-clone"
           Tags={[

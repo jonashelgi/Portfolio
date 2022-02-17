@@ -1,4 +1,3 @@
-export { Wrapper } from "./Wrapper";
 export { Header } from "./Header";
 export { CourseProgress } from "./CourseProgress";
 export { ProjectCard } from "./ProjectCard";

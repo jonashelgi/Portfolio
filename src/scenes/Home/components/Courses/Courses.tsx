@@ -3,14 +3,13 @@ import React from "react";
 
 import { BsBook } from "react-icons/bs";
 import { CourseProgress } from "../../../../components";
-import styles from "./Courses.module.css";
 
 const Courses = () => {
   return (
     <Container maxW="8xl">
       <div>
-        <h3 className={styles.title}>
-          <BsBook size={40} className={styles.icon} /> NÁMSKEIÐ
+        <h3>
+          <BsBook size={40} /> NÁMSKEIÐ
         </h3>
         <CourseProgress
           Title="Docker and Kubernetes: The Complete Guide"

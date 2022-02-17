@@ -36,7 +36,6 @@ export const Header = () => {
             href={"https://www.linkedin.com/in/jonashelgi/"}
             target="_blank"
             rel="noreferrer"
-            className="HoverItem"
           >
             <BsLinkedin
               size={46}

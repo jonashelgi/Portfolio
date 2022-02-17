@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import Wave from "react-wavify";
 
@@ -10,7 +11,7 @@ export interface WavesProps {
 }
 
 export const Waves = ({ Points = 3, Type = "top" }: WavesProps) => (
-  <div>
+  <Box display={"flex"}>
     {Type === "top" && (
       <Wave
         fill={color.main}
@@ -37,7 +38,7 @@ export const Waves = ({ Points = 3, Type = "top" }: WavesProps) => (
         className={styles.bottom}
       />
     )}
-  </div>
+  </Box>
 );
 
 export default Waves;

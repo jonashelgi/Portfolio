@@ -1,17 +1,14 @@
-import { Badge } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { BsLink, BsGithub, BsInfoCircle } from "react-icons/bs";
-
-import styles from "./ProjectCard.module.css";
+import React from "react";
+import { Badge, Box, Stack, Text } from "@chakra-ui/react";
+import { BsLink, BsGithub } from "react-icons/bs";
+import { color } from "../../utils";
 
 export interface ProjectCardProps {
   Title?: string;
   SubTitle?: string;
-  Text?: string;
-  ExtraText?: string;
+  Info?: string;
   LinkUrl?: string;
   GithubUrl?: string;
-  Storybook?: string;
   Tags?: {
     content: string;
   }[];
@@ -20,61 +17,58 @@ export interface ProjectCardProps {
 export const ProjectCard = ({
   Title,
   SubTitle,
-  Text,
-  Tags,
-  ExtraText,
+  Info,
   LinkUrl,
   GithubUrl,
-  Storybook,
+  Tags,
 }: ProjectCardProps) => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const toggleShow = () => setShow((s) => !s);
   return (
-    <div className={styles.card}>
-      {Title && <h3 className={styles.title}>{Title}</h3>}
-      {SubTitle && <h4>{SubTitle}</h4>}
-      {Text && <p className={styles.text}>{Text}</p>}
+    <Box bg={color.second} borderRadius={10} padding={5} className={"boxShadow"}>
+      {Title && (
+        <Text fontSize={"2xl"} fontWeight={"semibold"} color={color.main}>
+          {Title}
+        </Text>
+      )}
+      {SubTitle && (
+        <Text fontSize={"xl"} fontWeight={"semibold"} color={color.main}>
+          {SubTitle}
+        </Text>
+      )}
+      {Info && (
+        <Text fontSize={"lg"} color={color.main}>
+          {Info}
+        </Text>
+      )}
       {Tags && (
-        <h5>
+        <Text fontSize={"2xl"}>
           {Tags.map((data: any, index: number) => (
-            <Badge
-              style={{ margin: "2px", backgroundColor: "red" }}
-              key={index}
-            >
+            <Badge key={index} color={color.main}>
               {data.content}
             </Badge>
           ))}
-        </h5>
+        </Text>
       )}
-      {LinkUrl && (
-        <a href={LinkUrl} target="_blank" rel="noreferrer">
-          <BsLink
-            size={40}
-            className={styles.icon}
-            aria-label="Linkur á vefsíðuna"
-          />
-        </a>
-      )}
-      {GithubUrl && (
-        <a href={GithubUrl} target="_blank" rel="noreferrer">
-          <BsGithub
-            size={40}
-            className={styles.icon}
-            aria-label="Linkur á Github"
-          />
-        </a>
-      )}
-      {ExtraText && (
-        <BsInfoCircle
-          size={40}
-          onClick={toggleShow}
-          className={styles.icon}
-          aria-label="Opnar upplýsinga glugga"
-        />
-      )}
-    </div>
+      <Stack direction={"row"}>
+        {LinkUrl && (
+          <a href={LinkUrl} target="_blank" rel="noreferrer">
+            <BsLink
+              size={40}
+              aria-label="Linkur á vefsíðuna"
+              color={color.main}
+            />
+          </a>
+        )}
+        {GithubUrl && (
+          <a href={GithubUrl} target="_blank" rel="noreferrer">
+            <BsGithub
+              size={40}
+              aria-label="Linkur á Github"
+              color={color.main}
+            />
+          </a>
+        )}
+      </Stack>
+    </Box>
   );
 };
 
