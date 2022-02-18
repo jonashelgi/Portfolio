@@ -3,14 +3,14 @@ import { Container, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { BsKanban } from "react-icons/bs";
 
 import { ProjectCard } from "../../../../components";
-import { color } from "../../../../utils";
+import { color, font } from "../../../../utils";
 
 const Projects = () => {
   return (
     <Container maxW="8xl" pb={"28"}>
       <Stack direction={"row"} pt={5} pb={5}>
         <BsKanban size={40} color={color.second} />
-        <Text fontSize={"2xl"} color={color.second}>
+        <Text fontSize={font.md} color={color.second}>
           VERKEFNI
         </Text>
       </Stack>

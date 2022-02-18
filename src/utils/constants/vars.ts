@@ -10,3 +10,9 @@ export const color = {
   black: "#444444",
   red: "#d9534f",
 };
+
+export const font = {
+  sm: "lg",
+  md: "2xl",
+  lg: "4xl",
+};

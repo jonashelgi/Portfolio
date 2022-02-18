@@ -1,7 +1,7 @@
 import React from "react";
 import { Badge, Box, Stack, Text } from "@chakra-ui/react";
 import { BsLink, BsGithub } from "react-icons/bs";
-import { color } from "../../utils";
+import { color, font } from "../../utils";
 
 export interface ProjectCardProps {
   Title?: string;
@@ -25,22 +25,22 @@ export const ProjectCard = ({
   return (
     <Box bg={color.second} borderRadius={10} p={5} className={"boxShadow"}>
       {Title && (
-        <Text fontSize={"2xl"} fontWeight={"semibold"} color={color.main}>
+        <Text fontSize={font.md} fontWeight={"semibold"} color={color.main}>
           {Title}
         </Text>
       )}
       {SubTitle && (
-        <Text fontSize={"xl"} fontWeight={"semibold"} color={color.main}>
+        <Text fontSize={font.sm} fontWeight={"semibold"} color={color.main}>
           {SubTitle}
         </Text>
       )}
       {Info && (
-        <Text fontSize={"lg"} color={color.main} pt={2}>
+        <Text fontSize={font.sm} color={color.main} pt={2}>
           {Info}
         </Text>
       )}
       {Tags && (
-        <Text fontSize={"2xl"}>
+        <Text fontSize={font.md}>
           {Tags.map((data: any, index: number) => (
             <Badge key={index} color={color.main} bg={color.second}>
               {data.content}

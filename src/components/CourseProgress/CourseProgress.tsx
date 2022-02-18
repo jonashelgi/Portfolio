@@ -1,7 +1,7 @@
 import React from "react";
 import { BsLink45Deg, BsPatchCheck } from "react-icons/bs";
 import { Box, HStack, Progress as ProgressBar, Text } from "@chakra-ui/react";
-import { color } from "../../utils";
+import { color, font } from "../../utils";
 
 export interface CourseProgressProps {
   Title?: string;
@@ -10,8 +10,6 @@ export interface CourseProgressProps {
   Link?: string;
   Cert?: string;
 }
-
-// TODO add progressbar
 
 export const CourseProgress = ({
   Title,
@@ -23,12 +21,12 @@ export const CourseProgress = ({
   return (
     <Box>
       {Title && (
-        <Text fontSize={"2xl"} color={color.main}>
+        <Text fontSize={font.md} color={color.main} fontWeight={"semibold"}>
           {Title}
         </Text>
       )}
       {Info && (
-        <Text fontSize={"xl"} pb={2} color={color.main}>
+        <Text fontSize={font.sm} pb={2} color={color.main}>
           {Info}
         </Text>
       )}

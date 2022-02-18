@@ -58,7 +58,11 @@ export const Header = () => {
         <ButtonGroup
           size="lg"
           isAttached
-          style={isSmall ? {paddingTop: "15px"} : { display: "flex", justifyContent: "flex-end" }}
+          style={
+            isSmall
+              ? { paddingTop: "15px" }
+              : { display: "flex", justifyContent: "flex-end" }
+          }
           borderRadius={10}
         >
           <Button bg={color.main} _hover={{ bg: color.secmain }}>

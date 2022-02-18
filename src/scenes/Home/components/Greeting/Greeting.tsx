@@ -8,20 +8,25 @@ import {
   Image,
   Stack,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 
 // import { Motion } from "../../../../components";
 import avatar from "../../../../utils/images/avatar.png";
+import { color, font } from "../../../../utils";
 
 const Greeting = () => {
+  const [isSmall] = useMediaQuery("(max-width: 767px)");
   return (
-    <Container maxW="8xl" pt={20}>
+    <Container maxW="8xl" pb={40} pt={isSmall ? 10 : 40}>
       <Grid templateColumns="repeat(5, 1fr)">
         <GridItem colSpan={{ base: 5, md: 3 }}>
           <Stack>
             <Stack>
-              <Text fontSize={"2xl"}>Hæ! Ég heiti Jónas Helgi</Text>
-              <Text fontSize={"lg"}>
+              <Text fontSize={font.md} color={color.main}>
+                Hæ! Ég heiti Jónas Helgi
+              </Text>
+              <Text fontSize={font.sm} color={color.main}>
                 Ég sérhæfi mig í vefhönnun, þróun og forritun á vefsíðum. Ég
                 starfa sem vefhönnuður hjá Menntamálastofnun og sé um að þróa og
                 viðhalda rafrænu útgáfunni af Aðalnámskrá Grunnskóla. Einnig er
@@ -31,7 +36,9 @@ const Greeting = () => {
               </Text>
             </Stack>
             <Box pt={10}>
-              <Text fontSize={"xl"}>Það sem ég er helst að nota:</Text>
+              <Text fontSize={font.sm} color={color.main}>
+                Það sem ég er helst að nota:
+              </Text>
               <Box display={"flex"} flexWrap={"wrap"}>
                 <Image
                   src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
@@ -54,6 +61,11 @@ const Greeting = () => {
                   height="30px"
                 />
                 <Image
+                  src="https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white"
+                  alt="ChakraUI"
+                  height="30px"
+                />
+                <Image
                   src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"
                   alt="Jest"
                   height="30px"
@@ -68,11 +80,11 @@ const Greeting = () => {
                   alt="Strapi"
                   height="30px"
                 />
-                <Image
+                {/* <Image
                   src="https://img.shields.io/badge/-storybook-e35182?style=for-the-badge&logo=storybook&logoColor=white"
                   alt="StoryBook"
                   height="30px"
-                />
+                /> */}
                 <Image
                   src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
                   alt="Github"
@@ -83,7 +95,7 @@ const Greeting = () => {
           </Stack>
         </GridItem>
         <GridItem colSpan={{ base: 5, md: 2 }}>
-          <Center>
+          <Center pt={isSmall ? 10 : 0}>
             <Image src={avatar} alt="Avatar of Jonas" width="300px" />
           </Center>
         </GridItem>

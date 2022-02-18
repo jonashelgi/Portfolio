@@ -3,7 +3,7 @@ import React from "react";
 
 import { BsBook } from "react-icons/bs";
 import { CourseProgress } from "../../../../components";
-import { color } from "../../../../utils";
+import { color, font } from "../../../../utils";
 
 const Courses = () => {
   return (
@@ -11,7 +11,7 @@ const Courses = () => {
       <Box>
         <HStack pt={5} pb={5}>
           <BsBook size={40} color={color.main} />
-          <Text fontSize={"2xl"} color={color.main}>
+          <Text fontSize={font.md} color={color.main}>
             NÁMSKEIÐ
           </Text>
         </HStack>
