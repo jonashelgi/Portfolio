@@ -7,10 +7,12 @@ import { color } from "../../../../utils";
 
 const Projects = () => {
   return (
-    <Container maxW="8xl" paddingBottom={"28"}>
-      <Stack direction={"row"}paddingTop={5} paddingBottom={5}>
-        <BsKanban size={40} color={color.white100}/>
-        <Text fontSize={"2xl"} color={color.white100}>VERKEFNI</Text>
+    <Container maxW="8xl" pb={"28"}>
+      <Stack direction={"row"} pt={5} pb={5}>
+        <BsKanban size={40} color={color.second} />
+        <Text fontSize={"2xl"} color={color.second}>
+          VERKEFNI
+        </Text>
       </Stack>
       <SimpleGrid minChildWidth={"300px"} gap={5}>
         <ProjectCard

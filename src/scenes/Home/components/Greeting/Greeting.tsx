@@ -15,7 +15,7 @@ import avatar from "../../../../utils/images/avatar.png";
 
 const Greeting = () => {
   return (
-    <Container maxW="8xl" paddingTop={20}>
+    <Container maxW="8xl" pt={20}>
       <Grid templateColumns="repeat(5, 1fr)">
         <GridItem colSpan={{ base: 5, md: 3 }}>
           <Stack>
@@ -30,7 +30,7 @@ const Greeting = () => {
                 vel út á sama hvaða græju þau eru skoðuð.
               </Text>
             </Stack>
-            <Box paddingTop={10}>
+            <Box pt={10}>
               <Text fontSize={"xl"}>Það sem ég er helst að nota:</Text>
               <Box display={"flex"} flexWrap={"wrap"}>
                 <Image

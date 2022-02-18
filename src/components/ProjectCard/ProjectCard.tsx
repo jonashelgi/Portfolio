@@ -23,7 +23,7 @@ export const ProjectCard = ({
   Tags,
 }: ProjectCardProps) => {
   return (
-    <Box bg={color.second} borderRadius={10} padding={5} className={"boxShadow"}>
+    <Box bg={color.second} borderRadius={10} p={5} className={"boxShadow"}>
       {Title && (
         <Text fontSize={"2xl"} fontWeight={"semibold"} color={color.main}>
           {Title}
@@ -35,34 +35,34 @@ export const ProjectCard = ({
         </Text>
       )}
       {Info && (
-        <Text fontSize={"lg"} color={color.main}>
+        <Text fontSize={"lg"} color={color.main} pt={2}>
           {Info}
         </Text>
       )}
       {Tags && (
         <Text fontSize={"2xl"}>
           {Tags.map((data: any, index: number) => (
-            <Badge key={index} color={color.main}>
+            <Badge key={index} color={color.main} bg={color.second}>
               {data.content}
             </Badge>
           ))}
         </Text>
       )}
-      <Stack direction={"row"}>
-        {LinkUrl && (
-          <a href={LinkUrl} target="_blank" rel="noreferrer">
-            <BsLink
-              size={40}
-              aria-label="Linkur á vefsíðuna"
-              color={color.main}
-            />
-          </a>
-        )}
+      <Stack direction={"row"} pt={2}>
         {GithubUrl && (
           <a href={GithubUrl} target="_blank" rel="noreferrer">
             <BsGithub
               size={40}
               aria-label="Linkur á Github"
+              color={color.main}
+            />
+          </a>
+        )}
+        {LinkUrl && (
+          <a href={LinkUrl} target="_blank" rel="noreferrer">
+            <BsLink
+              size={40}
+              aria-label="Linkur á vefsíðuna"
               color={color.main}
             />
           </a>
