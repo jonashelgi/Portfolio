@@ -6,13 +6,13 @@ import { color } from "../../utils";
 import styles from "./Waves.module.css";
 
 export interface WavesProps {
-  Points?: number;
-  Type?: "top" | "bottom";
+  points?: number;
+  type?: "top" | "bottom";
 }
 
-export const Waves = ({ Points = 3, Type = "top" }: WavesProps) => (
+export const Waves = ({ points = 3, type = "top" }: WavesProps) => (
   <Box display={"flex"}>
-    {Type === "top" && (
+    {type === "top" && (
       <Wave
         fill={color.main}
         paused={false}
@@ -20,12 +20,12 @@ export const Waves = ({ Points = 3, Type = "top" }: WavesProps) => (
           height: 25,
           amplitude: 25,
           speed: 0.1,
-          points: Points,
+          points: points,
         }}
         className={styles.top}
       />
     )}
-    {Type === "bottom" && (
+    {type === "bottom" && (
       <Wave
         fill={color.second}
         paused={false}
@@ -33,7 +33,7 @@ export const Waves = ({ Points = 3, Type = "top" }: WavesProps) => (
           height: 25,
           amplitude: 25,
           speed: 0.1,
-          points: Points,
+          points: points,
         }}
         className={styles.bottom}
       />

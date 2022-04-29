@@ -29,15 +29,15 @@ const motionList: MotionTypes = {
 };
 
 export interface MotionProps {
-  Type: MotionType;
+  type: MotionType;
   children: React.ReactNode;
 }
 
-export const Motion = ({ Type, children }: MotionProps) => {
+export const Motion = ({ type, children }: MotionProps) => {
   return (
     <motion.div
-      initial={motionList[Type].initial}
-      animate={motionList[Type].animate}
+      initial={motionList[type].initial}
+      animate={motionList[type].animate}
       transition={{ type: "spring", stiffness: 40 }}
     >
       {children}

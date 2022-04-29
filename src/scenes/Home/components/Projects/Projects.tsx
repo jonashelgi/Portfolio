@@ -2,7 +2,7 @@ import React from "react";
 import { Container, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { BsKanban } from "react-icons/bs";
 
-import { ProjectCard } from "../../../../components";
+import { Card } from "../../../../components";
 import { color, font } from "../../../../utils";
 
 const Projects = () => {
@@ -15,12 +15,12 @@ const Projects = () => {
         </Text>
       </Stack>
       <SimpleGrid minChildWidth={"300px"} gap={5}>
-        <ProjectCard
-          Title="Aðalnámskrá grunnskóla"
-          SubTitle="Menntamálastofnun"
-          Info="Hanna og forrita aðalnámskrá grunnskóla yfir á rafrænt form ásamt áframhaldandi þróun og viðhald."
-          LinkUrl="https://adalnamskra.is/"
-          Tags={[
+        <Card
+          title="Aðalnámskrá grunnskóla"
+          subTitle="Menntamálastofnun"
+          info="Hanna og forrita aðalnámskrá grunnskóla yfir á rafrænt form ásamt áframhaldandi þróun og viðhald."
+          linkUrl="https://adalnamskra.is/"
+          tags={[
             { content: "React" },
             { content: "Typescript" },
             { content: "Prismic" },
@@ -28,25 +28,25 @@ const Projects = () => {
             { content: "Ísland.is UI library" },
           ]}
         />
-        <ProjectCard
-          Title="Portfolio"
-          SubTitle="Jónas Helgi"
-          Info="Síða sem inniheldur yfirlit af öllum mínum verkefnum, þetta er síðan sem þú ert á núna. "
-          GithubUrl="https://github.com/jonashelgi/portfolio"
-          Tags={[
+        <Card
+          title="Portfolio"
+          subTitle="Jónas Helgi"
+          info="Síða sem inniheldur yfirlit af öllum mínum verkefnum, þetta er síðan sem þú ert á núna. "
+          githubUrl="https://github.com/jonashelgi/portfolio"
+          tags={[
             { content: "React" },
             { content: "Typescript " },
-            { content: "React-Bootstrap" },
+            { content: "ChakraUI" },
             { content: "Firebase" },
           ]}
         />
-        <ProjectCard
-          Title="Epic Store Clone"
-          SubTitle="Jónas Helgi"
-          Info="Endurherma af fræga windows tölvuleikja appinu hjá Epic Store."
-          LinkUrl="https://gamestore-clone.web.app/"
-          GithubUrl="https://github.com/jonashelgi/epicstore-clone"
-          Tags={[
+        <Card
+          title="Epic Store Clone"
+          subTitle="Jónas Helgi"
+          info="Endurherma af fræga windows tölvuleikja appinu hjá Epic Store."
+          linkUrl="https://gamestore-clone.web.app/"
+          githubUrl="https://github.com/jonashelgi/epicstore-clone"
+          tags={[
             { content: "React" },
             { content: "Typescript " },
             { content: "React-Bootstrap" },

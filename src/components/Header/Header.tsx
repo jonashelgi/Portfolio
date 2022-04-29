@@ -1,21 +1,19 @@
 import React from "react";
 import {
-  Button,
-  ButtonGroup,
+  Box,
   Container,
   HStack,
   SimpleGrid,
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { BsGithub, BsLinkedin, BsStackOverflow } from "react-icons/bs";
 import { Link as ScrollLink } from "react-scroll";
+import { BsGithub, BsLinkedin, BsStackOverflow } from "react-icons/bs";
 
 import { color } from "../../utils";
 
 export const Header = () => {
   const [isSmall] = useMediaQuery("(max-width: 500px)");
-
   return (
     <Container maxW="8xl" pt={"10"}>
       <SimpleGrid minChildWidth="200px">
@@ -54,28 +52,42 @@ export const Header = () => {
             />
           </a>
         </HStack>
-
-        <ButtonGroup
-          size="lg"
-          isAttached
+        <HStack
           style={
             isSmall
               ? { paddingTop: "15px" }
               : { display: "flex", justifyContent: "flex-end" }
           }
-          borderRadius={10}
         >
-          <Button bg={color.main} _hover={{ bg: color.secmain }}>
-            <ScrollLink to="Projects">
-              <Text color={color.second}>Verkefni</Text>
-            </ScrollLink>
-          </Button>
-          <Button bg={color.main} _hover={{ bg: color.secmain }}>
-            <ScrollLink to="Courses">
-              <Text color={color.second}>Námskeið</Text>
-            </ScrollLink>
-          </Button>
-        </ButtonGroup>
+          <ScrollLink to="Projects">
+            <Box
+              background={color.main}
+              p={2}
+              pl={4}
+              pr={4}
+              borderRadius={4}
+              cursor={"pointer"}
+            >
+              <Text color={color.second} fontSize={"xl"}>
+                Verkefni
+              </Text>
+            </Box>
+          </ScrollLink>
+          <ScrollLink to="Addition">
+            <Box
+              background={color.main}
+              p={2}
+              pl={4}
+              pr={4}
+              borderRadius={4}
+              cursor={"pointer"}
+            >
+              <Text color={color.second} fontSize={"xl"}>
+                Viðbót
+              </Text>
+            </Box>
+          </ScrollLink>
+        </HStack>
       </SimpleGrid>
     </Container>
   );

@@ -1,5 +1,5 @@
 export { Header } from "./Header";
-export { CourseProgress } from "./CourseProgress";
-export { ProjectCard } from "./ProjectCard";
+export { Progress } from "./Progress";
+export { Card } from "./Card";
 export { Waves } from "./Waves";
 export { Motion } from "./Motion";

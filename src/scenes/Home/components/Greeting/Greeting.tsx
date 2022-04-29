@@ -80,11 +80,6 @@ const Greeting = () => {
                   alt="Strapi"
                   height="30px"
                 />
-                {/* <Image
-                  src="https://img.shields.io/badge/-storybook-e35182?style=for-the-badge&logo=storybook&logoColor=white"
-                  alt="StoryBook"
-                  height="30px"
-                /> */}
                 <Image
                   src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
                   alt="Github"
