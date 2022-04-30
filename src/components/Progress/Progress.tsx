@@ -44,8 +44,14 @@ export const Progress = ({
           <a href={link} target="_blank" rel="noreferrer">
             <Tag
               color={color.main}
+              boxShadow={"inset 0 0 0px 1px " + color.main}
               variant={"outline"}
-              _hover={{ border: "1px" }}
+              transition={"0.2s"}
+              _hover={{
+                background: color.main,
+                color: color.second,
+                transition: "0.1s",
+              }}
             >
               <TagLabel>Námskeið</TagLabel>
             </Tag>
@@ -55,8 +61,14 @@ export const Progress = ({
           <a href={cert} target="_blank" rel="noreferrer">
             <Tag
               color={color.main}
+              boxShadow={"inset 0 0 0px 1px " + color.main}
               variant={"outline"}
-              _hover={{ border: "1px" }}
+              transition={"0.2s"}
+              _hover={{
+                background: color.main,
+                color: color.second,
+                transition: "0.1s",
+              }}
             >
               <TagLabel>Vottorð</TagLabel>
             </Tag>

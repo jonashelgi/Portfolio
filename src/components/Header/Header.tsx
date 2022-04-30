@@ -67,6 +67,11 @@ export const Header = () => {
               pr={4}
               borderRadius={4}
               cursor={"pointer"}
+              transition={"0.2s"}
+              _hover={{
+                filter: "contrast(130%)",
+                transition: "0.2s",
+              }}
             >
               <Text color={color.second} fontSize={"xl"}>
                 Verkefni
@@ -81,6 +86,11 @@ export const Header = () => {
               pr={4}
               borderRadius={4}
               cursor={"pointer"}
+              transition={"0.2s"}
+              _hover={{
+                filter: "contrast(130%)",
+                transition: "0.2s",
+              }}
             >
               <Text color={color.second} fontSize={"xl"}>
                 Viðbót

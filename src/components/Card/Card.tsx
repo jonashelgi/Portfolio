@@ -52,8 +52,14 @@ export const Card = ({
           <a href={githubUrl} target="_blank" rel="noreferrer">
             <Tag
               color={color.main}
+              boxShadow={"inset 0 0 0px 1px " + color.main}
               variant={"outline"}
-              _hover={{ border: "1px" }}
+              transition={"0.2s"}
+              _hover={{
+                background: color.main,
+                color: color.second,
+                transition: "0.1s",
+              }}
             >
               <TagLabel>Github</TagLabel>
             </Tag>
@@ -63,8 +69,14 @@ export const Card = ({
           <a href={linkUrl} target="_blank" rel="noreferrer">
             <Tag
               color={color.main}
+              boxShadow={"inset 0 0 0px 1px " + color.main}
               variant={"outline"}
-              _hover={{ border: "1px" }}
+              transition={"0.2s"}
+              _hover={{
+                background: color.main,
+                color: color.second,
+                transition: "0.1s",
+              }}
             >
               <TagLabel>Vefsíða</TagLabel>
             </Tag>
