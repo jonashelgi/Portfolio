@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-import { BsJournalBookmarkFill } from "react-icons/bs";
+import { BsJournalBookmarkFill, BsBook } from "react-icons/bs";
 import { Progress } from "../../../../components";
 import { color, font } from "../../../../utils";
 
@@ -56,7 +56,7 @@ const Addition = () => {
         </Box>
         <Box>
           <HStack pb={5}>
-            <BsJournalBookmarkFill size={40} color={color.main} />
+            <BsBook size={40} color={color.main} />
             <Text fontSize={font.md} color={color.main}>
               BÆKUR
             </Text>
