@@ -1,6 +1,5 @@
 import React from "react";
-import { Badge, Box, Stack, Text } from "@chakra-ui/react";
-import { BsLink, BsGithub } from "react-icons/bs";
+import { Badge, Box, Stack, Tag, TagLabel, Text } from "@chakra-ui/react";
 import { color, font } from "../../utils";
 
 export interface CardProps {
@@ -51,20 +50,24 @@ export const Card = ({
       <Stack direction={"row"} pt={2}>
         {githubUrl && (
           <a href={githubUrl} target="_blank" rel="noreferrer">
-            <BsGithub
-              size={40}
-              aria-label="Linkur á Github"
+            <Tag
               color={color.main}
-            />
+              variant={"outline"}
+              _hover={{ border: "1px" }}
+            >
+              <TagLabel>Github</TagLabel>
+            </Tag>
           </a>
         )}
         {linkUrl && (
           <a href={linkUrl} target="_blank" rel="noreferrer">
-            <BsLink
-              size={40}
-              aria-label="Linkur á vefsíðuna"
+            <Tag
               color={color.main}
-            />
+              variant={"outline"}
+              _hover={{ border: "1px" }}
+            >
+              <TagLabel>Vefsíða</TagLabel>
+            </Tag>
           </a>
         )}
       </Stack>

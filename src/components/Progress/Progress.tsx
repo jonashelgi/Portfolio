@@ -42,15 +42,23 @@ export const Progress = ({
       <HStack pt={2} pb={5}>
         {link && (
           <a href={link} target="_blank" rel="noreferrer">
-            <Tag color={color.main} variant={"outline"}>
-              <TagLabel>Link</TagLabel>
+            <Tag
+              color={color.main}
+              variant={"outline"}
+              _hover={{ border: "1px" }}
+            >
+              <TagLabel>Námskeið</TagLabel>
             </Tag>
           </a>
         )}
         {cert && (
           <a href={cert} target="_blank" rel="noreferrer">
-            <Tag color={color.main} variant={"outline"}>
-              <TagLabel>Certification</TagLabel>
+            <Tag
+              color={color.main}
+              variant={"outline"}
+              _hover={{ border: "1px" }}
+            >
+              <TagLabel>Vottorð</TagLabel>
             </Tag>
           </a>
         )}
