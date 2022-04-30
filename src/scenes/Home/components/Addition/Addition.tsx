@@ -33,11 +33,8 @@ const Addition = () => {
           <Progress
             title="Complete C# Masterclass"
             info="Learn C# Programming - WPF, Databases, Linq, Collections, Game Development with Unity. More than just the C# basics!"
-            progress={100}
+            progress={80}
             link="https://www.udemy.com/course/complete-csharp-masterclass/"
-            cert={
-              "https://www.udemy.com/certificate/UC-4fb1ecdc-bff4-47e9-bd2b-7b42ac3542ff/"
-            }
           />
           <Progress
             title="The Complete 2021 Web Development Bootcamp"
