@@ -1,16 +1,16 @@
-import React from "react";
-import { Badge, Box, Stack, Tag, TagLabel, Text } from "@chakra-ui/react";
-import { color, font } from "../../utils";
+import React from 'react'
+import { Badge, Box, Stack, Tag, TagLabel, Text } from '@chakra-ui/react'
+import { color, font } from 'utils'
 
 export interface CardProps {
-  title?: string;
-  subTitle?: string;
-  info?: string;
-  linkUrl?: string;
-  githubUrl?: string;
+  title?: string
+  subTitle?: string
+  info?: string
+  linkUrl?: string
+  githubUrl?: string
   tags?: {
-    content: string;
-  }[];
+    content: string
+  }[]
 }
 
 export const Card = ({
@@ -22,14 +22,14 @@ export const Card = ({
   tags,
 }: CardProps) => {
   return (
-    <Box bg={color.second} borderRadius={10} p={5} className={"boxShadow"}>
+    <Box bg={color.second} borderRadius={10} p={5} className={'boxShadow'}>
       {title && (
-        <Text fontSize={font.md} fontWeight={"semibold"} color={color.main}>
+        <Text fontSize={font.md} fontWeight={'semibold'} color={color.main}>
           {title}
         </Text>
       )}
       {subTitle && (
-        <Text fontSize={font.sm} fontWeight={"semibold"} color={color.main}>
+        <Text fontSize={font.sm} fontWeight={'semibold'} color={color.main}>
           {subTitle}
         </Text>
       )}
@@ -47,18 +47,18 @@ export const Card = ({
           ))}
         </Text>
       )}
-      <Stack direction={"row"} pt={2}>
+      <Stack direction={'row'} pt={2}>
         {githubUrl && (
-          <a href={githubUrl} target="_blank" rel="noreferrer">
+          <a href={githubUrl} target='_blank' rel='noreferrer'>
             <Tag
               color={color.main}
-              boxShadow={"inset 0 0 0px 1px " + color.main}
-              variant={"outline"}
-              transition={"0.2s"}
+              boxShadow={'inset 0 0 0px 1px ' + color.main}
+              variant={'outline'}
+              transition={'0.2s'}
               _hover={{
                 background: color.main,
                 color: color.second,
-                transition: "0.1s",
+                transition: '0.1s',
               }}
             >
               <TagLabel>Github</TagLabel>
@@ -66,16 +66,16 @@ export const Card = ({
           </a>
         )}
         {linkUrl && (
-          <a href={linkUrl} target="_blank" rel="noreferrer">
+          <a href={linkUrl} target='_blank' rel='noreferrer'>
             <Tag
               color={color.main}
-              boxShadow={"inset 0 0 0px 1px " + color.main}
-              variant={"outline"}
-              transition={"0.2s"}
+              boxShadow={'inset 0 0 0px 1px ' + color.main}
+              variant={'outline'}
+              transition={'0.2s'}
               _hover={{
                 background: color.main,
                 color: color.second,
-                transition: "0.1s",
+                transition: '0.1s',
               }}
             >
               <TagLabel>Vefsíða</TagLabel>
@@ -84,7 +84,7 @@ export const Card = ({
         )}
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

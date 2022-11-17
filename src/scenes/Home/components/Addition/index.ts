@@ -1,1 +1,1 @@
-export { default as Addition } from "./Addition";
+export { default as Addition } from './Addition'

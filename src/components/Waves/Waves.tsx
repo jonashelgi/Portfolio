@@ -1,18 +1,18 @@
-import { Box } from "@chakra-ui/react";
-import React from "react";
-import Wave from "react-wavify";
+import React from 'react'
+import { Box } from '@chakra-ui/react'
+import Wave from 'react-wavify'
 
-import { color } from "../../utils";
-import styles from "./Waves.module.css";
+import { color } from 'utils'
+import styles from './Waves.module.css'
 
 export interface WavesProps {
-  points?: number;
-  type?: "top" | "bottom";
+  points?: number
+  type?: 'top' | 'bottom'
 }
 
-export const Waves = ({ points = 3, type = "top" }: WavesProps) => (
-  <Box display={"flex"}>
-    {type === "top" && (
+export const Waves = ({ points = 3, type = 'top' }: WavesProps) => (
+  <Box display={'flex'}>
+    {type === 'top' && (
       <Wave
         fill={color.main}
         paused={false}
@@ -25,7 +25,7 @@ export const Waves = ({ points = 3, type = "top" }: WavesProps) => (
         className={styles.top}
       />
     )}
-    {type === "bottom" && (
+    {type === 'bottom' && (
       <Wave
         fill={color.second}
         paused={false}
@@ -39,6 +39,6 @@ export const Waves = ({ points = 3, type = "top" }: WavesProps) => (
       />
     )}
   </Box>
-);
+)
 
-export default Waves;
+export default Waves

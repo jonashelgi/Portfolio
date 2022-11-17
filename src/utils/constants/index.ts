@@ -1,1 +1,1 @@
-export * from "./vars";
+export * from './vars'

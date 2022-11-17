@@ -1,3 +1,3 @@
-export { Greeting } from "./Greeting";
-export { Projects } from "./Projects";
-export { Addition } from "./Addition";
+export { Greeting } from './Greeting'
+export { Projects } from './Projects'
+export { Addition } from './Addition'
