@@ -7,6 +7,8 @@ import {
   Tag,
   TagLabel,
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
+
 import { color, font } from 'utils'
 
 export interface ProgressProps {
@@ -24,6 +26,7 @@ export const Progress = ({
   link,
   cert,
 }: ProgressProps) => {
+  const [t] = useTranslation('translation')
   return (
     <Box>
       {title && (
@@ -53,7 +56,7 @@ export const Progress = ({
                 transition: '0.1s',
               }}
             >
-              <TagLabel>Námskeið</TagLabel>
+              <TagLabel>{t('button.course')}</TagLabel>
             </Tag>
           </a>
         )}
@@ -70,7 +73,7 @@ export const Progress = ({
                 transition: '0.1s',
               }}
             >
-              <TagLabel>Vottorð</TagLabel>
+              <TagLabel>{t('button.certification')}</TagLabel>
             </Tag>
           </a>
         )}

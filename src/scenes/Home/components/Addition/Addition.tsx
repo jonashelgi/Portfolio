@@ -11,9 +11,11 @@ import React from 'react'
 import { BsJournalBookmarkFill, BsBook } from 'react-icons/bs'
 import { Progress } from 'components'
 import { color, font } from 'utils'
+import { useTranslation } from 'react-i18next'
 
 const Addition = () => {
   const [isSmall] = useMediaQuery('(max-width: 767px)')
+  const [t] = useTranslation('translation')
   return (
     <Container maxW='8xl'>
       <SimpleGrid columns={isSmall ? 1 : 2} spacing={10}>
@@ -21,7 +23,7 @@ const Addition = () => {
           <HStack pb={5}>
             <BsJournalBookmarkFill size={40} color={color.main} />
             <Text fontSize={font.md} color={color.main}>
-              NÁMSKEIÐ
+              {t('addition.courses')}
             </Text>
           </HStack>
           <Progress
@@ -33,8 +35,9 @@ const Addition = () => {
           <Progress
             title='Complete C# Masterclass'
             info='Learn C# Programming - WPF, Databases, Linq, Collections, Game Development with Unity. More than just the C# basics!'
-            progress={80}
+            progress={100}
             link='https://www.udemy.com/course/complete-csharp-masterclass/'
+            cert='https://www.udemy.com/certificate/UC-4fb1ecdc-bff4-47e9-bd2b-7b42ac3542ff/'
           />
           <Progress
             title='The Complete 2021 Web Development Bootcamp'
@@ -55,7 +58,7 @@ const Addition = () => {
           <HStack pb={5}>
             <BsBook size={40} color={color.main} />
             <Text fontSize={font.md} color={color.main}>
-              BÆKUR
+              {t('addition.books')}
             </Text>
           </HStack>
           <Progress

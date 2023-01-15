@@ -1,0 +1,41 @@
+{
+  "addition": {
+    "courses": "Námskeið",
+    "books": "Bækur"
+  },
+  "greeting": {
+    "title": "Hæ! Ég heiti Jónas Helgi",
+    "text": "Ég sérhæfi mig í vefhönnun, þróun og forritun á vefsíðum. Ég starfa sem hugbúnaðarsérfræðingur hjá Advania. Ég legg mikið upp úr því að öll mín viðmót og allar mínar vefsíður líta vel út á sama hvaða græju þau eru skoðuð.",
+    "currentlyUsing": "Það sem ég er helst að nota:"
+  },
+  "projects": {
+    "title": "Verkefni",
+    "curriculum": {
+      "title": "Aðalnámskrá grunnskóla",
+      "company": "Menntamálastofnun",
+      "text": "Hanna og forrita aðalnámskrá grunnskóla yfir á rafrænt form ásamt áframhaldandi þróun og viðhald."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "company": "Jónas Helgi",
+      "text": "Síða sem inniheldur yfirlit af öllum mínum verkefnum, þetta er síðan sem þú ert á núna."
+    },
+    "epic": {
+      "title": "Epic Store Clone",
+      "company": "Jónas Helgi",
+      "text": "Endurherma af fræga windows tölvuleikja appinu hjá Epic Store."
+    }
+  },
+  "button": {
+    "course": "Námskeið",
+    "book": "Bók",
+    "website": "Vefsíða",
+    "github": "Github",
+    "certification": "Vottorð"
+  },
+  "navigation": {
+    "language": "en",
+    "addition": "Viðbót",
+    "projects": "Verkefni"
+  }
+}

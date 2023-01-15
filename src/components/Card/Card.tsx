@@ -1,5 +1,7 @@
 import React from 'react'
 import { Badge, Box, Stack, Tag, TagLabel, Text } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
+
 import { color, font } from 'utils'
 
 export interface CardProps {
@@ -21,6 +23,8 @@ export const Card = ({
   githubUrl,
   tags,
 }: CardProps) => {
+  const [t] = useTranslation('translation')
+
   return (
     <Box bg={color.second} borderRadius={10} p={5} className={'boxShadow'}>
       {title && (
@@ -61,7 +65,7 @@ export const Card = ({
                 transition: '0.1s',
               }}
             >
-              <TagLabel>Github</TagLabel>
+              <TagLabel>{t('button.course')}</TagLabel>
             </Tag>
           </a>
         )}
@@ -78,7 +82,7 @@ export const Card = ({
                 transition: '0.1s',
               }}
             >
-              <TagLabel>Vefsíða</TagLabel>
+              <TagLabel>{t('button.website')}</TagLabel>
             </Tag>
           </a>
         )}

@@ -10,12 +10,14 @@ import {
   Text,
   useMediaQuery,
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 import avatar from 'utils/images/avatar.png'
 import { color, font } from 'utils'
 
 const Greeting = () => {
   const [isSmall] = useMediaQuery('(max-width: 767px)')
+  const [t] = useTranslation('translation')
   return (
     <Container maxW='8xl' pb={40} pt={isSmall ? 10 : 40}>
       <Grid templateColumns='repeat(5, 1fr)'>
@@ -23,18 +25,15 @@ const Greeting = () => {
           <Stack>
             <Stack>
               <Text fontSize={font.md} color={color.main}>
-                Hæ! Ég heiti Jónas Helgi
+                {t('greeting.title')}
               </Text>
               <Text fontSize={font.sm} color={color.main}>
-                Ég sérhæfi mig í vefhönnun, þróun og forritun á vefsíðum. Ég
-                starfa sem hugbúnaðarsérfræðingur hjá Advania. Ég legg mikið upp
-                úr því að öll mín viðmót og allar mínar vefsíður líta vel út á
-                sama hvaða græju þau eru skoðuð.
+                {t('greeting.text')}
               </Text>
             </Stack>
             <Box pt={10}>
               <Text fontSize={font.sm} color={color.main}>
-                Það sem ég er helst að nota:
+                {t('greeting.currentlyUsing')}
               </Text>
               <Box display={'flex'} flexWrap={'wrap'}>
                 <Image
@@ -43,8 +42,8 @@ const Greeting = () => {
                   height='30px'
                 />
                 <Image
-                  src='https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E'
-                  alt='Javascript'
+                  src='https://img.shields.io/badge/vuejs-168363.svg?style=for-the-badge&logo=vuedotjs&logoColor=white'
+                  alt='Vue3'
                   height='30px'
                 />
                 <Image
@@ -53,33 +52,18 @@ const Greeting = () => {
                   height='30px'
                 />
                 <Image
-                  src='https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white'
-                  alt='GraphQL'
+                  src='https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white'
+                  alt='Storybook'
                   height='30px'
                 />
                 <Image
-                  src='https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white'
-                  alt='ChakraUI'
+                  src='https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white'
+                  alt='Git'
                   height='30px'
-                />
+                />{' '}
                 <Image
-                  src='https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white'
-                  alt='Jest'
-                  height='30px'
-                />
-                <Image
-                  src='https://img.shields.io/badge/Prismic-8B66A9?style=for-the-badge&logo=prismic&logoColor=white'
-                  alt='Prismic'
-                  height='30px'
-                />
-                <Image
-                  src='https://img.shields.io/badge/strapi%20-6933FF?style=for-the-badge&logo=strapi&logoColor=white'
-                  alt='Strapi'
-                  height='30px'
-                />
-                <Image
-                  src='https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white'
-                  alt='Github'
+                  src='https://img.shields.io/badge/figma-A435F0.svg?style=for-the-badge&logo=figma&logoColor=white'
+                  alt='Figma'
                   height='30px'
                 />
               </Box>

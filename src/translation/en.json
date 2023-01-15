@@ -1,0 +1,41 @@
+{
+  "addition": {
+    "courses": "Courses",
+    "books": "Books"
+  },
+  "greeting": {
+    "title": "Hi! My name is Jónas Helgi",
+    "text": "I specialize in web design and web development. I currently work as a software specialist at one the the largest IT/tech companies in Iceland, Advania. I make sure that all my interfaces and all my websites look good no matter what device they are viewed on.",
+    "currentlyUsing": "What I am currently using"
+  },
+  "projects": {
+    "title": "Projects",
+    "curriculum": {
+      "title": "The Icelandic national curriculum",
+      "company": "Menntamálastofnun",
+      "text": "Design and develop the The Icelandic national curriculum to an electronic format along with ongoing development and maintenance."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "company": "Jónas Helgi",
+      "text": "A page that contains an overview of all my projects, this is the page you are currently on."
+    },
+    "epic": {
+      "title": "Epic Store Clone",
+      "company": "Jónas Helgi",
+      "text": "Emulation of the famous windows video game app by Epic Store."
+    }
+  },
+  "button": {
+    "course": "Course",
+    "book": "Book",
+    "website": "Website",
+    "github": "Github",
+    "certification": "Certification"
+  },
+  "navigation": {
+    "language": "is",
+    "addition": "Additions",
+    "projects": "Projects"
+  }
+}
