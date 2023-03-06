@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react'
 
 import { Waves, Header } from 'components'
 import { color } from 'utils'
-import { Greeting, Projects, Addition } from './components'
+import { Greeting, Courses, Books } from './components'
 
 const Home = () => {
   return (
@@ -14,11 +14,11 @@ const Home = () => {
       </Box>
       <Waves type='top' />
       <Box bg={color.main} id='Projects'>
-        <Projects />
+        <Courses />
       </Box>
       <Waves type='bottom' />
       <Box bg={color.second} id='Addition'>
-        <Addition />
+        <Books />
       </Box>
       <Waves type='top' />
     </Box>

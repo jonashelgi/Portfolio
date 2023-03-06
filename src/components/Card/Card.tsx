@@ -65,7 +65,7 @@ export const Card = ({
                 transition: '0.1s',
               }}
             >
-              <TagLabel>{t('button.course')}</TagLabel>
+              <TagLabel>{t('button.github')}</TagLabel>
             </Tag>
           </a>
         )}

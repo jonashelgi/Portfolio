@@ -1,4 +1,11 @@
 {
+  "header": {
+    "menu": {
+      "contact": "Hafa samband",
+      "language": "Tungumál",
+      "information": "Upplýsingar"
+    }
+  },
   "addition": {
     "courses": "Námskeið",
     "books": "Bækur"

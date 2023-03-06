@@ -1,4 +1,11 @@
 {
+  "header": {
+    "menu": {
+      "contact": "Contact",
+      "language": "Language",
+      "information": "Information"
+    }
+  },
   "addition": {
     "courses": "Courses",
     "books": "Books"
