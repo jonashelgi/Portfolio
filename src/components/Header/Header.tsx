@@ -91,7 +91,7 @@ export const Header = () => {
                 }}
               >
                 <Text color={color.second} fontSize={'xl'}>
-                  {t('navigation.projects')}
+                  {t('navigation.courses')}
                 </Text>
               </Box>
             </ScrollLink>
@@ -110,7 +110,7 @@ export const Header = () => {
                 }}
               >
                 <Text color={color.second} fontSize={'xl'}>
-                  {t('navigation.addition')}
+                  {t('navigation.books')}
                 </Text>
               </Box>
             </ScrollLink>
@@ -166,13 +166,11 @@ export const Header = () => {
               <MenuOptionGroup title={t('header.menu.information') as string}>
                 <MenuItem>
                   <ScrollLink to='Projects'>
-                    {t('navigation.projects')}
+                    {t('navigation.courses')}
                   </ScrollLink>
                 </MenuItem>
                 <MenuItem>
-                  <ScrollLink to='Addition'>
-                    {t('navigation.addition')}
-                  </ScrollLink>
+                  <ScrollLink to='Addition'>{t('navigation.books')}</ScrollLink>
                 </MenuItem>
               </MenuOptionGroup>
             </MenuList>
