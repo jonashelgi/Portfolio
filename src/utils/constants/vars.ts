@@ -10,7 +10,9 @@ export const color = {
 }
 
 export const font = {
+  xs: 'md',
   sm: 'lg',
-  md: '2xl',
-  lg: '4xl',
+  md: 'xl',
+  lg: '2xl',
+  xl: '3xl',
 }

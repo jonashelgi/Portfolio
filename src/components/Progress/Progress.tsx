@@ -6,6 +6,7 @@ import {
   Text,
   Tag,
   TagLabel,
+  useMediaQuery,
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
@@ -31,14 +32,15 @@ export const Progress = ({
   image,
 }: ProgressProps) => {
   const [t] = useTranslation('translation')
-
-  const m = {}
+  const [isSmall] = useMediaQuery('(max-width: 767px)')
+  const fontTitle = isSmall ? font.sm : font.md
+  const fontInfo = isSmall ? font.xs : font.sm
   return (
-    <HStack>
+    <HStack style={{ overflow: 'hidden' }}>
       <Box>
         {title && (
           <Text
-            fontSize={font.md}
+            fontSize={fontTitle}
             color={color.main}
             fontWeight={'semibold'}
             pb={2}
@@ -47,7 +49,7 @@ export const Progress = ({
           </Text>
         )}
         {info && (
-          <Text fontSize={font.sm} pb={2} color={color.main}>
+          <Text fontSize={fontInfo} pb={2} color={color.main}>
             {info}
           </Text>
         )}
@@ -64,7 +66,7 @@ export const Progress = ({
             />
           </>
         )}
-        <HStack pt={2} pb={5}>
+        <HStack pt={2}>
           {link && (
             <a href={link} target='_blank' rel='noreferrer'>
               <Tag

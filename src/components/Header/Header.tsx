@@ -24,11 +24,12 @@ import { color } from 'utils'
 export const Header = () => {
   const [t, i18n] = useTranslation('translation')
   const [isSmall] = useMediaQuery('(max-width: 767px)')
+  const [showConnections] = useMediaQuery('(max-width: 250px)')
 
   return (
     <Container maxW='8xl' pt={'10'}>
-      {!isSmall && (
-        <SimpleGrid minChildWidth='200px'>
+      <SimpleGrid minChildWidth='100px'>
+        {!showConnections && (
           <HStack gap={'3'}>
             <a
               href={'https://www.linkedin.com/in/jonashelgi/'}
@@ -55,6 +56,8 @@ export const Header = () => {
               />
             </a>
           </HStack>
+        )}
+        {!isSmall && (
           <HStack style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Box
               background={color.main}
@@ -115,68 +118,74 @@ export const Header = () => {
               </Box>
             </ScrollLink>
           </HStack>
-        </SimpleGrid>
-      )}
-      {isSmall && (
-        <Box display='flex' justifyContent='flex-end'>
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={IconButton}
-              variant='outline'
-              icon={<FiMenu size={30} />}
-              color={color.second}
-              bg={color.main}
-              _active={{ bg: color.main }}
-              _hover={{ bg: color.main }}
-              height={'46px'}
-              width={'70px'}
-            />
-            <MenuList minWidth='150px'>
-              <MenuOptionGroup title={t('header.menu.contact') as string}>
-                <MenuItem>
-                  <a
-                    href={'https://www.linkedin.com/in/jonashelgi/'}
-                    target='_blank'
-                    rel='noreferrer'
+        )}
+        {isSmall && (
+          <Box display='flex' justifyContent='flex-end'>
+            <Menu closeOnSelect={false}>
+              <MenuButton
+                as={IconButton}
+                variant='outline'
+                icon={<FiMenu size={30} />}
+                color={color.second}
+                bg={color.main}
+                _active={{ bg: color.main }}
+                _hover={{ bg: color.main }}
+                height={'46px'}
+                width={'70px'}
+              />
+              <MenuList minWidth={showConnections ? '100px' : '150px'}>
+                {showConnections && (
+                  <>
+                    <MenuOptionGroup title={t('header.menu.contact') as string}>
+                      <MenuItem>
+                        <a
+                          href={'https://www.linkedin.com/in/jonashelgi/'}
+                          target='_blank'
+                          rel='noreferrer'
+                        >
+                          Linkedin
+                        </a>
+                      </MenuItem>
+                      <MenuItem>
+                        <a
+                          href={'https://github.com/jonashelgi'}
+                          target='_blank'
+                          rel='noreferrer'
+                        >
+                          Github
+                        </a>
+                      </MenuItem>
+                    </MenuOptionGroup>
+                    <MenuDivider />
+                  </>
+                )}
+                <MenuOptionGroup title={t('header.menu.language') as string}>
+                  <MenuItem
+                    onClick={() =>
+                      i18n.changeLanguage(t('navigation.language') as string)
+                    }
                   >
-                    Linkedin
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a
-                    href={'https://github.com/jonashelgi'}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Github
-                  </a>
-                </MenuItem>
-              </MenuOptionGroup>
-              <MenuDivider />
-              <MenuOptionGroup title={t('header.menu.language') as string}>
-                <MenuItem
-                  onClick={() =>
-                    i18n.changeLanguage(t('navigation.language') as string)
-                  }
-                >
-                  {t('navigation.language')}
-                </MenuItem>
-              </MenuOptionGroup>
-              <MenuDivider />
-              <MenuOptionGroup title={t('header.menu.information') as string}>
-                <MenuItem>
-                  <ScrollLink to='Projects'>
-                    {t('navigation.courses')}
-                  </ScrollLink>
-                </MenuItem>
-                <MenuItem>
-                  <ScrollLink to='Addition'>{t('navigation.books')}</ScrollLink>
-                </MenuItem>
-              </MenuOptionGroup>
-            </MenuList>
-          </Menu>
-        </Box>
-      )}
+                    {t('navigation.language')}
+                  </MenuItem>
+                </MenuOptionGroup>
+                <MenuDivider />
+                <MenuOptionGroup title={t('header.menu.information') as string}>
+                  <MenuItem>
+                    <ScrollLink to='Projects'>
+                      {t('navigation.courses')}
+                    </ScrollLink>
+                  </MenuItem>
+                  <MenuItem>
+                    <ScrollLink to='Addition'>
+                      {t('navigation.books')}
+                    </ScrollLink>
+                  </MenuItem>
+                </MenuOptionGroup>
+              </MenuList>
+            </Menu>
+          </Box>
+        )}
+      </SimpleGrid>
     </Container>
   )
 }

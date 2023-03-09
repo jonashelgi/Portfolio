@@ -7,7 +7,7 @@ import {
   Text,
   useMediaQuery,
 } from '@chakra-ui/react'
-import { BsJournalBookmarkFill, BsKanban } from 'react-icons/bs'
+import { BsJournalBookmarkFill } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
 
 import { Progress } from 'components'
@@ -21,7 +21,7 @@ const Projects = () => {
     <Container maxW='8xl' pb={'28'}>
       <HStack paddingBottom={6}>
         <BsJournalBookmarkFill size={40} color={color.second} />
-        <Text fontSize={font.md} color={color.second}>
+        <Text fontSize={font.lg} color={color.second}>
           {t('addition.courses')}
         </Text>
       </HStack>

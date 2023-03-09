@@ -19,7 +19,7 @@ const Addition = () => {
     <Container maxW='8xl' pb={'200px'}>
       <HStack pb={4}>
         <BsBook size={40} color={color.main} />
-        <Text fontSize={font.md} color={color.main}>
+        <Text fontSize={font.lg} color={color.main}>
           {t('addition.books')}
         </Text>
       </HStack>
