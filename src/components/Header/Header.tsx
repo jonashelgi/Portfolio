@@ -79,7 +79,7 @@ export const Header = () => {
                 {t('navigation.language')}
               </Text>
             </Box>
-            <ScrollLink to='Projects'>
+            <ScrollLink to='Courses'>
               <Box
                 background={color.main}
                 p={2}
@@ -98,7 +98,7 @@ export const Header = () => {
                 </Text>
               </Box>
             </ScrollLink>
-            <ScrollLink to='Addition'>
+            <ScrollLink to='Books'>
               <Box
                 background={color.main}
                 p={2}

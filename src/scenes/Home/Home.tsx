@@ -13,11 +13,11 @@ const Home = () => {
         <Greeting />
       </Box>
       <Waves type='top' />
-      <Box bg={color.main} id='Projects'>
+      <Box bg={color.main} id='Courses'>
         <Courses />
       </Box>
       <Waves type='bottom' />
-      <Box bg={color.second} id='Addition'>
+      <Box bg={color.second} id='Books'>
         <Books />
       </Box>
       <Waves type='top' />
